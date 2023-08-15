@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>  {{title}}  </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+{% load static %}
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png ' %}" rel="icon">
+  <link href="{% static ' assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Satisfy" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Laura
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/laura-free-creative-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+
+
+  <main id="main">
+
+    <!-- ======= Contact Me Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <span class="cont text-white">SSECI</span>
+          <h2 class="cont1 text-white">SSECI</h2>
+          <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+        </div>
+
+        <div class="=row">   
+          <div class="col-lg-12">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+
+
+              <div class="row mt-3">
+
+                <div class="col-md-4 form-group">
+                  <P class="=text-center text-success fst-italic"> <span class="badge bg-warning"> Nom </span> </P>
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Votre Nom" required>
+                </div>
+
+                <div class="col-md-4 form-group">
+                  <P class="=text-center text-success fst-italic"> <span class="badge bg-warning"> Prenom </span> </P>
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Votre Prenom" required>
+                </div>     
+
+                <div class="col-md-4 form-group mt-3 mt-md-0">
+                  <P class="=text-center text-success fst-italic"> <span class="badge bg-warning"> Sexe </span> </P>
+                  <select type="text" nom="user_sexe" aria-label="Default select example" class="form-select" id="sexe" required>
+                    <option selected> selectionner votre sexe </option>
+                    {% for s in sexe %}
+                    <option value="{{s.id}}">{{s.libelle}}</option>
+                    {% endfor %}
+                  </select>    
+                </div>
+
+              </div>
+
+              <div class="row mt-3">
+    
+                <div class="col-md-4 form-group">
+                  <P class="=text-center text-success fst-italic"> <span class="badge bg-warning"> lieu de naissance </span> </P>
+                  <input type="text" name="name" class="form-control" id="name" placeholder=" votre lieu de naissance" required>
+                </div>
+
+                <div class="col-md-4 form-group">
+                  <P class="=text-center text-success fst-italic"> <span class="badge bg-warning"> date de naissance </span> </P>
+                  <input type="date" name="name" class="form-control" id="name" placeholder="Votre date de naissance" required>
+                </div>     
+
+                <div class="col-md-4 form-group">
+                  <P class="=text-center text-success fst-italic"> <span class="badge bg-warning"> adresse mail </span> </P>
+                  <input type="email" name="name" class="form-control" id="name" placeholder="Votre email" required>
+                </div>     
+              </div>
+
+              
+              
+
+              <div class="row mt-3">
+        
+                <div class="col-md-4 form-group">
+                  <P class="=text-center text-success fst-italic"> <span class="badge bg-warning"> numéro de téléphone </span> </P>
+                  <input type="text" name="name" class="form-control" id="name" placeholder=" votre numéro de téléphone" required>
+                </div>
+
+                <div class="col-md-4 form-group">
+                  <P class="=text-center text-success fst-italic"> <span class="badge bg-warning"> numéro de carte d'étudiant </span> </P>
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Votre numéro de carte d'étudiant" required>
+                </div>     
+
+                <div class="col-md-4 form-group">
+                  <P class="=text-center text-success fst-italic"> <span class="badge bg-warning"> numéro CNI </span> </P>
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Votre numéro CNI" required>
+                </div>     
+              </div>
+
+
+              <div class="row mt-3">
+        
+                <div class="col-md-4 form-group">
+                  <P class="=text-center text-success fst-italic"> <span class="badge bg-warning"> copie de la carte d'étudiant(pdf-png-jpg) </span> </P>
+                  <input type="file" name="name" class="form-control" id="name"  required>
+                </div>
+
+                <div class="col-md-4 form-group">
+                  <P class="=text-center text-success fst-italic"> <span class="badge bg-warning"> copie de CNI (pdf-png-jpg) </span> </P>
+                  <input type="file" name="name" class="form-control" id="name"  required>
+                </div>    
+
+                <div class="col-md-4 form-group mt-3 mt-md-0">
+                  <P class="=text-center text-success fst-italic"> <span class="badge bg-warning"> Université d'accueil </span> </P>
+                  <select type="text" nom="user_université" aria-label="Default select example" class="form-select" id="université" required>
+                    <option selected> selectionner votre université </option>
+                    {% for u in universite %}
+                    <option value="{{u.id}}">{{u.name}}</option>
+                    {% endfor %}
+                  </select>   
+                </div>   
+
+              </div>
+
+              <div class="row mt-3">
+        
+                <div class="col-md-4 form-group mt-3 mt-md-0">
+                  <P class="=text-center text-success fst-italic"> <span class="badge bg-warning"> UFR </span> </P>
+                  <select type="text" nom="user_sexe" aria-label="Default select example" class="form-select" id="ufr" required>
+                    <option selected> selectionner votre UFR </option>
+                    {% for uf in ufr %}
+                    <option value="{{uf.id}}">{{uf.name}}</option>
+                    {% endfor %}
+                  </select>   
+                </div> 
+
+                <div class="col-md-4 form-group mt-3 mt-md-0">
+                  <P class="=text-center text-success fst-italic"> <span class="badge bg-warning"> Filière </span> </P>
+                  <select type="text" nom="user_sexe" aria-label="Default select example" class="form-select" id="filière" required>
+                    <option selected> selectionner votre filière </option>
+                    {% for f in filiere %}
+                    <option value="{{f.id}}">{{f.name}}</option>
+                    {% endfor %}
+                  </select>   
+                </div>    
+
+                <div class="col-md-4 form-group mt-3 mt-md-0">
+                  <P class="=text-center text-success fst-italic"> <span class="badge bg-warning"> spécialité </span> </P>
+                  <select type="text" nom="user_sexe" aria-label="Default select example" class="form-select" id="spécialité" required>
+                    <option selected> selectionner votre spécialité </option>
+                    {% for sp in specialite %}
+                    <option value="{{sp.id}}">{{sp.name}}</option>
+                    {% endfor %}
+                  </select>   
+                </div>   
+              </div>
+
+              <div class="row mt-3">
+        
+                <div class="col-md-4 form-group mt-3 mt-md-0">
+                  <P class="=text-center text-success fst-italic"> <span class="badge bg-warning"> niveau </span> </P>
+                  <select type="text" nom="user_sexe" aria-label="Default select example" class="form-select" id="niveau" required>
+                    <option selected> selectionner votre niveau </option>
+                    {% for n in niveau %}
+                    <option value="{{n.id}}">{{n.libelle}}</option>
+                    {% endfor %}
+                  </select>   
+                </div> 
+
+                <div class="col-md-4 form-group mt-3 mt-md-0">
+                  <P class="=text-center text-success fst-italic"> <span class="badge bg-warning"> ville </span> </P>
+                  <select type="text" nom="user_sexe" aria-label="Default select example" class="form-select" id="ville" required>
+                    <option selected> selectionner votre ville </option>
+                    {% for v in ville %}
+                    <option value="{{v.id}}">{{v.libelle}}</option>
+                    {% endfor %}
+                  </select>   
+                </div>    
+
+                <div class="col-md-4 form-group mt-3 mt-md-0">
+                  <P class="=text-center text-success fst-italic"> <span class="badge bg-warning"> commune </span> </P>
+                  <select type="text" nom="user_sexe" aria-label="Default select example" class="form-select" id="commune" required>
+                    <option selected> selectionner votre commune </option>
+                    {% for c in commune %}
+                    <option value="{{c.id}}">{{c.name}}</option>
+                    {% endfor %}
+                  </select>   
+                </div>   
+              </div>
+
+<div class="my-3">
+  <div class="loading"> loading </div>
+  <div class="error message"></div>
+  <div class="sent-message"> votre message a été bien envoyé</div>
+</div>
+
+<div class="text-center"><button type="submit">identifiez-vous</button></div>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+      </div>
+    </section><!-- End Contact Me Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <h3 class="cont2 text-white">SSECI</h3>
+      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+      
+      <div class="copyright">
+        &copy; Copyright <strong><span>SSECI</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/laura-free-creative-bootstrap-theme/ -->
+        Designed by <a href="https://bootstrapmade.com/">Aris</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
